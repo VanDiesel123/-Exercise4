@@ -11,6 +11,7 @@ pipeline {
         stage('Configure CMake') {
             steps {
                 bat '''
+                if exist build rmdir /S /Q build
                 cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Debug
                 '''
             }
@@ -27,6 +28,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 bat '''
+                if not exist build\\test_reports mkdir build\\test_reports
                 build\\runTests.exe --gtest_output=xml:build/test_reports/test_report.xml
                 '''
             }
@@ -35,7 +37,6 @@ pipeline {
 
     post {
         always {
-            // Звіт тепер теж без Lab4/
             junit 'build/test_reports/*.xml'
         }
     }

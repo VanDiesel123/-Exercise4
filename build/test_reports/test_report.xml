@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" disabled="0" errors="0" time="0.007" timestamp="2025-11-13T05:16:03.664" name="AllTests">
+  <testsuite name="StringProcessorTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2025-11-13T05:16:03.666">
+    <testcase name="UpperCase" file="D:\Ex4_linux\Lab4\test\stringProcessor.cpp" line="4" status="run" result="completed" time="0." timestamp="2025-11-13T05:16:03.667" classname="StringProcessorTest" />
+  </testsuite>
+  <testsuite name="SortTest" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2025-11-13T05:16:03.669">
+    <testcase name="CorrectOrder" file="D:\Ex4_linux\Lab4\test\sort.cpp" line="4" status="run" result="completed" time="0." timestamp="2025-11-13T05:16:03.670" classname="SortTest" />
+  </testsuite>
+</testsuites>

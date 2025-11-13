@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 3.16)
+project(CI_CD_Lab CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+  DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+)
+set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+add_library(core STATIC
+  src/sort.cpp
+  src/stringProcessor.cpp
+)
+target_include_directories(core PUBLIC src)
+
+add_executable(runTests
+  test/sort.cpp
+  test/stringProcessor.cpp
+)
+target_link_libraries(runTests PRIVATE core GTest::gtest GTest::gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(runTests)

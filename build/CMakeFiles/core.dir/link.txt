@@ -1,0 +1,2 @@
+C:\Strawberry\c\bin\ar.exe qc libcore.a CMakeFiles/core.dir/src/sort.cpp.obj CMakeFiles/core.dir/src/stringProcessor.cpp.obj
+C:\Strawberry\c\bin\ranlib.exe libcore.a

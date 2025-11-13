@@ -1,0 +1,5 @@
+add_test([=[StringProcessorTest.UpperCase]=]  D:/Ex4_linux/Lab4/build/runTests.exe [==[--gtest_filter=StringProcessorTest.UpperCase]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[StringProcessorTest.UpperCase]=]  PROPERTIES WORKING_DIRECTORY D:/Ex4_linux/Lab4/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[SortTest.CorrectOrder]=]  D:/Ex4_linux/Lab4/build/runTests.exe [==[--gtest_filter=SortTest.CorrectOrder]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SortTest.CorrectOrder]=]  PROPERTIES WORKING_DIRECTORY D:/Ex4_linux/Lab4/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  runTests_TESTS StringProcessorTest.UpperCase SortTest.CorrectOrder)
